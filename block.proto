@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package blockchain;
+
+message Block {
+    uint64 nonce = 1;
+
+    string hash = 2;
+    string prev_hash = 3;
+
+    string tx_root = 4;
+}
+
+message BlockParams {
+    uint64 difficulty = 1;
+}
