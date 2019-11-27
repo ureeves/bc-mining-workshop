@@ -59,19 +59,6 @@ def is_valid_block(
     return True
 
 
-def hash_block(block: block_pb2.Block, params: block_pb2.BlockParams) -> block_pb2.Block:
-
-    while not is_valid_block(block, params):
-        block.hash = ""
-        block.nonce = 0
-
-        block.nonce = random.getrandbits(64)
-        computed_hash = hashlib.sha256(block.SerializeToString()).hexdigest()
-        block.hash = computed_hash
-
-    return block
-
-
 class Color:
    PURPLE = '\033[95m'
    GREEN = '\033[92m'
