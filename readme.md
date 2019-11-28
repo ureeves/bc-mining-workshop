@@ -125,6 +125,12 @@ def hash_block(block: block_pb2.Block, params: block_pb2.BlockParams) -> block_p
     return block
 ```
 
+You'll also need protobuf support. So, in your terminal:
+
+```bash
+pip install protobuf
+```
+
 It is your job to scour Python's documentation for appropriate functions and
 patterns to use.
 
